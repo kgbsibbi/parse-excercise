@@ -5,6 +5,7 @@ public class SampleMessage {
 	private char[] sampleMessagePRST;
 	private char[] createdMessage;
 	private char[] thermometer;
+	private char[] weighingScale;
 	private String createdString;
 	int createdIndex;
 	
@@ -26,8 +27,19 @@ public class SampleMessage {
 		thermometer = new char[thermo.length()];
 		thermo.getChars(0, thermo.length(), thermometer, 0);
 		
+		String wei = "E700005A00581236010100520000000000000D1D0048";
+		wei += "F0000000000400400001000CFF0002FA2007120612100000";
+		wei += "0003000CFF0000F320071206121000000001000CFF0002F82007120620050000";
+		wei += "0003000CFF0000F22007120620050000";
+		weighingScale = new char[wei.length()];
+		wei.getChars(0, wei.length(), weighingScale, 0);
+		
 		createdString = new String();
 		createdIndex=0;
+	}
+	
+	public char[] getSampleWeighingScalePRST(){
+		return weighingScale;
 	}
 	
 	public char[] getSampleThermometerPRST(){

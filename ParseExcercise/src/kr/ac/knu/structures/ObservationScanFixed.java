@@ -17,7 +17,6 @@ public class ObservationScanFixed extends Node{
 		parsedValue = children.get(0).getParsedValue(); // handle id
 		Class selectedClass = Config.getClass(parsedValue);
 		
-		// 아래 부분을 수정해야 함. 어떻게?
 		OCTETString octet = new OCTETString();
 		children.add(octet);
 		startIndex = octet.parseAs(message, startIndex, selectedClass);
