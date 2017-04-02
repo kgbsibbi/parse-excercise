@@ -5,6 +5,11 @@ import kr.ac.knu.structures.SimpleNuObservedValue;
 import kr.ac.knu.structures.TimeStamp;
 
 public class AttrValueMapHandle extends Node{
+	public AttrValueMapHandle(){
+		super();
+		parsedString="Body Temperature";
+	}
+	
 	public int parse(char[] message, int startIndex){
 		children.add(new SimpleNuObservedValue());
 		children.add(new TimeStamp());
